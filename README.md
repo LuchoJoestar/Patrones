@@ -1,18 +1,44 @@
-# 🪪 Generador de Credenciales para Eventos
+# Informe Técnico: Sistema de Generación de Credenciales para Eventos  
+**Nombre:** Luis Acevedo  
+**Patrones de Diseño Aplicados:** Prototype y Singleton  
 
-![Java](https://img.shields.io/badge/Java-17%2B-blue)
-![GitHub last commit](https://img.shields.io/github/last-commit/tu-usuario/tu-repo)
-![License](https://img.shields.io/badge/License-MIT-green)
+---
 
-Sistema para generar credenciales personalizadas usando patrones de diseño (Prototype y Singleton). Perfecto para eventos, conferencias o accesos.
+## 1. Introducción  
+El sistema permite generar credenciales personalizadas para eventos mediante una plantilla base clonable, garantizando:  
+✔ **Consistencia** en el diseño mediante Singleton  
+✔ **Eficiencia** en creación de credenciales con Prototype  
+✔ **Flexibilidad** para personalización de campos  
 
-## 📦 Requisitos
-- Java JDK 17+
-- Git (para control de versiones)
+---
 
-## 🚀 Cómo Usar
+## 2. Estructura del Sistema  
+### Diagrama de Clases  
+```plantuml
+@startuml
+class Credencial {
+  - nombre: String
+  - cargo: String
+  - rut: String
+  - diseño: String
+  + clone(): Credencial
+  + agregarCampo()
+}
 
-### 1. Clonar el repositorio
-```bash
-git clone https://github.com/tu-usuario/tu-repo.git
-cd tu-repo
+class PlantillaCredencial {
+  - colorFondo: String
+  - logo: String
+  + crearCredencial()
+}
+
+class GestorCredenciales {
+  - instancia: GestorCredenciales
+  + getInstancia()
+  + crearCredencialBase()
+}
+
+Credencial ..|> Cloneable
+PlantillaCredencial --> Credencial
+GestorCredenciales --> PlantillaCredencial
+GestorCredenciales --> Credencial
+@enduml
