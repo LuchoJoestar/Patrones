@@ -43,7 +43,7 @@ El sistema permite generar credenciales personalizadas para eventos mediante una
 ## 📸 Capturas del sistema
 
   ![Menu](./imagenes/Menu.jpg)
-  ![Diagrama](./imagenes/Crear_Crendencial.jpg)
+  ![Crear](./imagenes/Crear_Crendencial.jpg)
 
 ---
 ---
