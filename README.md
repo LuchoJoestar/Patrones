@@ -35,8 +35,17 @@ El sistema permite generar credenciales personalizadas para eventos mediante una
 │   ├── GestorCredenciales.java     // Clase Singleton
 │   └── Main.java                   // Menú por consola
 │
+├── imagenes/
+│   ├── Crear_Credencial.jpg
+│   ├── Diagrama_UML.png
+│   ├── Menu.jpg
+│   ├── Mostrar_Credencial.jpg
+│   ├── Plantilla.jpg
+│   ├── Reiniciar.jpg
+│   └── Salir.jpg
+│
 ├── README.md                        // Informe técnico
-└── diagrama_uml.png              // Diagrama UML en formato PNG
+
 ```
 ---
 
