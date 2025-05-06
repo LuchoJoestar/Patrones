@@ -51,23 +51,26 @@ El sistema permite generar credenciales personalizadas para eventos mediante una
 
 ## 📸 Capturas del sistema
 
-  ![Menu](./imagenes/Menu.jpg)
+### 🧭 Menú Principal
+![Menú](./imagenes/Menu.jpg)
 
+### 🆕 Crear Credencial
+![Crear Credencial](./imagenes/Crear_Credencial.jpg)
 
-  ![Crear](./imagenes/Crear_Credencial.jpg)
+### 👁️ Mostrar Credencial
+![Mostrar Credencial](./imagenes/Mostrar_Credencial.jpg)
 
+### 🧩 Plantilla de Configuración
+![Plantilla](./imagenes/Plantilla.jpg)
 
-  ![Mostrar](./imagenes/Mostrar_Credencial.jpg)
+### 🔄 Reiniciar
+![Reiniciar](./imagenes/Reiniciar.jpg)
 
+### 🚪 Salir
+![Salir](./imagenes/Salir.jpg)
 
-  ![Config](./imagenes/Plantilla.jpg)
-
-
-  ![Reiniciar](./imagenes/Reiniciar.jpg)
-   
-  
-  ![Salir](./imagenes/Salir.jpg)
 ---
+
 
 ## 🛠️ Herramientas Utilizadas
 
