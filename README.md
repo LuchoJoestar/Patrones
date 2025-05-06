@@ -38,7 +38,14 @@ El sistema permite generar credenciales personalizadas para eventos mediante una
 ├── README.md                        // Informe técnico
 └── diagrama_uml.png              // Diagrama UML en formato PNG
 ```
+---
 
+## 📸 Capturas del sistema
+
+  ![Menu](./imagenes/Menu.jpg)
+  ![Diagrama](./imagenes/Crear_Crendencial.jpg)
+
+---
 ---
 
 ## 🛠️ Herramientas Utilizadas
