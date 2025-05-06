@@ -20,35 +20,7 @@ El sistema permite generar credenciales personalizadas para eventos mediante una
 
 ### 📐 Diagrama de Clases (PlantUML)
 
-```plantuml
-@startuml
-class Credencial {
-  - nombre: String
-  - cargo: String
-  - rut: String
-  - diseño: String
-  + clone(): Credencial
-  + agregarCampo()
-}
-
-class PlantillaCredencial {
-  - colorFondo: String
-  - logo: String
-  + crearCredencial()
-}
-
-class GestorCredenciales {
-  - instancia: GestorCredenciales
-  + getInstancia()
-  + crearCredencialBase()
-}
-
-Credencial ..|> Cloneable
-PlantillaCredencial --> Credencial
-GestorCredenciales --> PlantillaCredencial
-GestorCredenciales --> Credencial
-@enduml
-```
+![](diagrama_uml)
 
 ---
 
