@@ -20,7 +20,7 @@ El sistema permite generar credenciales personalizadas para eventos mediante una
 
 ### 📐 Diagrama de Clases (PlantUML)
 
-![Diagrama](./imagenes/Diagrama UML.png)
+![Diagrama](./imagenes/Diagrama_UML.png)
 
 ---
 
