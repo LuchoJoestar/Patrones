@@ -51,7 +51,7 @@ El sistema permite generar credenciales personalizadas para eventos mediante una
   ![Mostrar](./imagenes/Mostrar_Credencial.jpg)
 
 
-  ![Config](./imagenes/Config_plantilla.jpg)
+  ![Config](./imagenes/Plantilla.jpg)
 
 
   ![Reiniciar](./imagenes/Reiniciar.jpg)
