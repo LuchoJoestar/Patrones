@@ -75,7 +75,7 @@
    - Código auto-documentado mediante patrones
 
 3. **Rendimiento**:
-   - Tiempos de respuesta < 500ms para operaciones críticas
+   - Tiempos de respuesta rapidas para operaciones críticas
    - Consumo de memoria optimizado mediante Singleton
 
 ### 🔄 Áreas de Mejora
@@ -91,22 +91,4 @@
    - Aumentar cobertura de pruebas unitarias al 90%+
    - Implementar pruebas de carga con JMeter
 
-### 📚 Lecciones Aprendidas
-1. **Documentación**:
-   - Los diagramas UML ahorraron 30+ horas en reuniones de alineación
-   - La especificación clara de patrones redujo bugs en integración
-
-2. **Arquitectura**:
-   - El uso temprano de patrones evitó refactorizaciones costosas
-   - La separación clara de responsabilidades aceleró el onboarding
-
-3. **Operaciones**:
-   - Los patrones facilitaron la implementación de CI/CD
-   - La modularidad permitió despliegues parciales
-
-## 🚀 Próximos Pasos
-1. Implementar sistema de prioridad de turnos (Patrón Strategy)
-2. Añadir autenticación JWT (Patrón Decorator)
-3. Migrar a arquitectura de microservicios
-
----
+--
