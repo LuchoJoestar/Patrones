@@ -1,5 +1,5 @@
 # 🏥 Tunomático - Sistema de Gestión de Turnos Digitales
-
+Nombre: Luis Acevedo Urzúa
 ## 📌 Descripción General del Sistema
 **Tunomático** es un sistema de gestión de turnos digitales diseñado para instituciones médicas que:
 - Reduce tiempos de espera en un 40% mediante algoritmos inteligentes
