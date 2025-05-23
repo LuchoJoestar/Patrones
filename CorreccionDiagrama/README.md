@@ -1,4 +1,4 @@
-
+### Diagrama de clases
 
 ### ❌ **Error 1: Herencia incorrecta entre `Reserva` y `NotificadorCorreo`**
 
