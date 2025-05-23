@@ -18,7 +18,7 @@ class NotificadorCorreo {
   + notificar()
 }
 
-Reserva <--x-- NotificadorCorreo
+Reserva <-- NotificadorCorreo
 ```
 
 #### ✅ Justificación:
