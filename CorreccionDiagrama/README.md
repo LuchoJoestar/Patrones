@@ -20,7 +20,7 @@ class NotificadorCorreo {
   + notificar()
 }
 
-Reserva <--x-- NotificadorCorreo  ' eliminar esta herencia
+Reserva <--x-- NotificadorCorreo
 ```
 
 #### ✅ Justificación:
@@ -80,5 +80,3 @@ GestorNotificaciones --> NotificadorSMS
 `GestorNotificaciones` no es un tipo de `NotificadorSMS`; más bien **los utiliza**. Esto es un caso claro donde debe aplicarse **composición sobre herencia**. Usar herencia aquí viola los principios SOLID (especialmente LSP y OCP) y dificulta la extensión del sistema si se agregan nuevos tipos de notificaciones.
 
 ---
-
-¿Te gustaría que integre estos cambios en un único bloque de PlantUML corregido y limpio?
