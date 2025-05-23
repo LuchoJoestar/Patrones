@@ -1,6 +1,4 @@
-Claro, aquí tienes **3 errores identificados** en el diagrama proporcionado, junto con su **corrección en PlantUML** y una **justificación** para cada uno:
 
----
 
 ### ❌ **Error 1: Herencia incorrecta entre `Reserva` y `NotificadorCorreo`**
 
