@@ -6,7 +6,7 @@ public abstract class ProductoDecorador extends Producto {
     protected Producto productoBase;
 
     public ProductoDecorador(Producto productoBase) {
-        super(productoBase.getNombre(), productoBase.getPrecio(), productoBase.getStock());
+        super(productoBase.getId(), productoBase.getNombre(), productoBase.getPrecio(), productoBase.getStock());
         this.productoBase = productoBase;
     }
 

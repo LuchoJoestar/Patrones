@@ -6,13 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Producto {
+    protected int id;
     protected String nombre;
     protected double precio;
     protected int stock;
 
     private final List<ObservadorStock> observadores = new ArrayList<>();
 
-    public Producto(String nombre, double precio, int stock) {
+    public Producto(int id, String nombre, double precio, int stock) {
+        this.id = id;
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
@@ -32,13 +34,17 @@ public abstract class Producto {
         if (cantidad <= stock) {
             stock -= cantidad;
             if (stock < 5) {
-                notificarObservadores(nombre + " tiene solo " + stock + " unidades disponibles.");
+                notificarObservadores(nombre + " (ID: " + id + ") tiene solo " + stock + " unidades disponibles.");
             }
         }
     }
 
     public void aumentarStock(int cantidad) {
         stock += cantidad;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getNombre() {

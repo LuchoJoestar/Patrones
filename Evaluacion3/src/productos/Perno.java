@@ -1,8 +1,8 @@
 package productos;
 
 public class Perno extends Producto {
-    public Perno(String nombre, double precio, int stock) {
-        super(nombre, precio, stock);
+    public Perno(int id,String nombre, double precio, int stock) {
+        super(id, nombre, precio, stock);
     }
 
     @Override

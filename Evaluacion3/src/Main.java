@@ -4,6 +4,7 @@ import inventario.AlertaStock;
 import inventario.GestorInventario;
 import productos.Producto;
 import productos.ProductoFactory;
+import utilidades.IdGenerator;
 
 import java.util.Scanner;
 
@@ -17,7 +18,7 @@ public class Main {
     public static void main(String[] args) {
         int opcion;
         do {
-            System.out.println("\n==== FERREPLUS ====");
+            System.out.println("\n==== FERRETERIA GULTRO ====");
             System.out.println("1. Agregar producto");
             System.out.println("2. Ver inventario");
             System.out.println("3. Reducir stock");
@@ -38,6 +39,8 @@ public class Main {
     }
 
     private static void agregarProducto() {
+        int id = IdGenerator.generarId(); // ← ID generado automáticamente
+
         System.out.print("Tipo (herramienta/perno): ");
         String tipo = scanner.nextLine();
 
@@ -52,9 +55,9 @@ public class Main {
         scanner.nextLine(); // limpiar buffer
 
         try {
-            Producto nuevo = ProductoFactory.crearProducto(tipo, nombre, precio, stock);
+            Producto nuevo = ProductoFactory.crearProducto(tipo, id, nombre, precio, stock);
             inventario.agregarProducto(nuevo);
-            System.out.println("¡Producto agregado correctamente!");
+            System.out.println("Producto agregado correctamente. ID asignado: " + id);
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
         }
@@ -125,7 +128,7 @@ public class Main {
             }
         }
 
-        System.out.println("❌ Producto no encontrado.");
+        System.out.println("Producto no encontrado.");
     }
 
 }
