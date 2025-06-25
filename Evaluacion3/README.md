@@ -16,14 +16,14 @@ En una ferretería es común manejar diversos productos (como herramientas y per
 - Permitir agregar productos de diferentes tipos fácilmente.
 - Aplicar funciones adicionales sin modificar las clases base.
 - Generar notificaciones automáticamente cuando el stock es bajo.
-
+- Permitir eliminar productos o remover decoradores si ya no son necesarios.
 ---
 
 ## 🧱 Estructura del Proyecto
 
 ```
 
-FerrePlus/
+Evaluacion3/
 ├── img/                   # (capturas o diagramas UML)
 ├── src/
 │   ├── decoradores/       # Patrones Decorator
