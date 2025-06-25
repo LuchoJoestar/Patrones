@@ -115,7 +115,7 @@ O desde el IDE ejecuta `Main.java`.
 * Diagrama de casos de uso
 ![Diagrama de caso de uso](img/caso_de_uso.png)
 * Diagrama de implementación
-
+![Diagrama de implementación](img/diagrama_implementacion.png)
 ---
 
 ## 🙋 Autor
