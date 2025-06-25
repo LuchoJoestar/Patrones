@@ -1,4 +1,3 @@
-¡Vamos con el `README.md` profesional para tu proyecto **FerrePlus**! Incluye todos los puntos que exige la pauta: descripción del sistema, patrones aplicados, instrucciones y justificación técnica clara.
 
 ---
 
