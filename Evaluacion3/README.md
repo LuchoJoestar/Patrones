@@ -111,7 +111,9 @@ O desde el IDE ejecuta `Main.java`.
 ## 📸 Diagrama UML
 
 * Diagrama de clases
+![Diagrama de clases](img/diagrama_clase.png)
 * Diagrama de casos de uso
+![Diagrama de caso de uso](img/caso_de_uso.png)
 * Diagrama de implementación
 
 ---
