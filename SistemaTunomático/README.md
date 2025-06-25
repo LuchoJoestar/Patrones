@@ -1,5 +1,5 @@
 # 🏥 Tunomático - Sistema de Gestión de Turnos Digitales
-
+Nombre: Luis Acevedo Urzúa
 ## 📌 Descripción General del Sistema
 **Tunomático** es un sistema de gestión de turnos digitales diseñado para instituciones médicas que:
 - Reduce tiempos de espera en un 40% mediante algoritmos inteligentes
@@ -78,17 +78,36 @@
    - Tiempos de respuesta rapidas para operaciones críticas
    - Consumo de memoria optimizado mediante Singleton
 
-### 🔄 Áreas de Mejora
-1. **Resistencia a fallos**:
-   - Implementar patrón Circuit Breaker para conexiones externas
-   - Añadir colas de mensajería (RabbitMQ) para operaciones asíncronas
+### **🔄Áreas de Mejora Simplificadas**
 
-2. **Monitorización**:
-   - Integrar Prometheus + Grafana para métricas en tiempo real
-   - Configurar alertas tempranas para fallos potenciales
+#### **1. Mejorar la Resistencia del Sistema**
+- **Para conexiones externas** (como el servicio de SMS):
+  - Agregar un sistema que detecte cuando falla y deje de intentar llamarlo temporalmente
+  - Reanudar automáticamente cuando el servicio vuelva a estar disponible
 
-3. **Pruebas**:
-   - Aumentar cobertura de pruebas unitarias al 90%+
-   - Implementar pruebas de carga con JMeter
+- **Para tareas lentas** (enviar notificaciones, generar reportes):
+  - Usar un sistema de colas que procese estas tareas en segundo plano
+  - Evitar que el usuario tenga que esperar
 
---
+#### **2. Mejorar el Monitoreo**
+- **Estadísticas en tiempo real**:
+  - Gráficos que muestren cuántos turnos se están gestionando
+  - Tiempos de respuesta del sistema
+
+- **Alertas automáticas**:
+  - Avisos cuando algo no funcione correctamente
+  - Notificaciones antes de que ocurra un problema grave
+
+#### **3. Mejorar las Pruebas**
+- **Pruebas automáticas**:
+  - Verificar que todas las funciones básicas sigan trabajando
+  - Asegurar que los cambios no rompan lo que ya funciona
+
+- **Pruebas de rendimiento**:
+  - Simular muchos usuarios usando el sistema al mismo tiempo
+  - Confirmar que responde rápido incluso con mucha demanda
+
+### **Beneficios de Estas Mejoras**
+✔ El sistema será más estable y confiable  
+✔ Los usuarios no experimentarán interrupciones  
+✔ Los problemas se podrán detectar y solucionar más rápido  
