@@ -1,4 +1,6 @@
+
 // src/Main.java
+import inventario.AlertaStock;
 import inventario.GestorInventario;
 import productos.Producto;
 import productos.ProductoFactory;
@@ -15,7 +17,8 @@ public class Main {
             System.out.println("\n==== FERREPLUS ====");
             System.out.println("1. Agregar producto");
             System.out.println("2. Ver inventario");
-            System.out.println("3. Salir");
+            System.out.println("3. Reducir stock");
+            System.out.println("4. Salir");
             System.out.print("Selecciona una opción: ");
             opcion = scanner.nextInt();
             scanner.nextLine(); // limpiar buffer
@@ -23,7 +26,8 @@ public class Main {
             switch (opcion) {
                 case 1 -> agregarProducto();
                 case 2 -> mostrarInventario();
-                case 3 -> System.out.println("¡Hasta luego!");
+                case 3 -> reducirStock();
+                case 4 -> System.out.println("¡Hasta luego!");
                 default -> System.out.println("Opción no válida.");
             }
         } while (opcion != 3);
@@ -46,15 +50,15 @@ public class Main {
         try {
             Producto nuevo = ProductoFactory.crearProducto(tipo, nombre, precio, stock);
             inventario.agregarProducto(nuevo);
-            System.out.println("✅ Producto agregado correctamente.");
+            System.out.println("¡Producto agregado correctamente!");
         } catch (IllegalArgumentException e) {
-            System.out.println("❌ Error: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
     private static void mostrarInventario() {
         if (inventario.estaVacio()) {
-            System.out.println("📦 Inventario vacío.");
+            System.out.println("Inventario vacío.");
             return;
         }
 
@@ -63,4 +67,25 @@ public class Main {
             p.mostrarInfo();
         }
     }
+
+    private static void reducirStock() {
+    System.out.print("Nombre del producto: ");
+    String nombreBuscado = scanner.nextLine();
+
+    for (Producto p : inventario.obtenerProductos()) {
+        if (p.getNombre().equalsIgnoreCase(nombreBuscado)) {
+            System.out.print("Cantidad a reducir: ");
+            int cantidad = scanner.nextInt();
+            scanner.nextLine(); // limpiar buffer
+
+            // Agrega un observador por defecto
+            p.agregarObservador(new AlertaStock());
+
+            p.reducirStock(cantidad);
+            System.out.println("✅ Stock actualizado.");
+            return;
+        }
+    }
+    System.out.println("Producto no encontrado.");
+}
 }
