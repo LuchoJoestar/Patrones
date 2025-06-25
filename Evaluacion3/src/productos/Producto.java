@@ -51,6 +51,12 @@ public abstract class Producto {
         return nombre;
     }
 
+    public void setPrecio(double nuevoPrecio) {
+    if (nuevoPrecio <= 0) {
+        throw new IllegalArgumentException("El precio debe ser mayor a cero");
+    }
+    this.precio = nuevoPrecio;
+}
     public double getPrecio() {
         return precio;
     }
