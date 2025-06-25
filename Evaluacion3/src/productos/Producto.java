@@ -1,14 +1,44 @@
+// src/productos/Producto.java
 package productos;
+
+import inventario.ObservadorStock;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Producto {
     protected String nombre;
     protected double precio;
     protected int stock;
 
+    private final List<ObservadorStock> observadores = new ArrayList<>();
+
     public Producto(String nombre, double precio, int stock) {
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
+    }
+
+    public void agregarObservador(ObservadorStock o) {
+        observadores.add(o);
+    }
+
+    protected void notificarObservadores(String mensaje) {
+        for (ObservadorStock o : observadores) {
+            o.notificar(mensaje);
+        }
+    }
+
+    public void reducirStock(int cantidad) {
+        if (cantidad <= stock) {
+            stock -= cantidad;
+            if (stock < 5) {
+                notificarObservadores(nombre + " tiene solo " + stock + " unidades disponibles.");
+            }
+        }
+    }
+
+    public void aumentarStock(int cantidad) {
+        stock += cantidad;
     }
 
     public String getNombre() {
@@ -21,16 +51,6 @@ public abstract class Producto {
 
     public int getStock() {
         return stock;
-    }
-
-    public void reducirStock(int cantidad) {
-        if (cantidad <= stock) {
-            stock -= cantidad;
-        }
-    }
-
-    public void aumentarStock(int cantidad) {
-        stock += cantidad;
     }
 
     public abstract void mostrarInfo();

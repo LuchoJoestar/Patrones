@@ -1,13 +1,13 @@
 // src/Main.java
+import inventario.GestorInventario;
 import productos.Producto;
 import productos.ProductoFactory;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    private static ArrayList<Producto> inventario = new ArrayList<>();
-    private static Scanner scanner = new Scanner(System.in);
+    private static final GestorInventario inventario = GestorInventario.getInstancia();
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         int opcion;
@@ -30,7 +30,7 @@ public class Main {
     }
 
     private static void agregarProducto() {
-        System.out.print("Tipo (Herramienta/Perno): ");
+        System.out.print("Tipo (herramienta/perno): ");
         String tipo = scanner.nextLine();
 
         System.out.print("Nombre del producto: ");
@@ -45,7 +45,7 @@ public class Main {
 
         try {
             Producto nuevo = ProductoFactory.crearProducto(tipo, nombre, precio, stock);
-            inventario.add(nuevo);
+            inventario.agregarProducto(nuevo);
             System.out.println("✅ Producto agregado correctamente.");
         } catch (IllegalArgumentException e) {
             System.out.println("❌ Error: " + e.getMessage());
@@ -53,13 +53,13 @@ public class Main {
     }
 
     private static void mostrarInventario() {
-        if (inventario.isEmpty()) {
+        if (inventario.estaVacio()) {
             System.out.println("📦 Inventario vacío.");
             return;
         }
 
         System.out.println("\n📋 Inventario Actual:");
-        for (Producto p : inventario) {
+        for (Producto p : inventario.obtenerProductos()) {
             p.mostrarInfo();
         }
     }
