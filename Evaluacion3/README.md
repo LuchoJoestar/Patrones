@@ -1,9 +1,3 @@
-
----
-
-### ✅ `README.md` — FerrePlus
-
-```markdown
 # 🛠️ FerrePlus
 
 **FerrePlus** es una aplicación de consola escrita en Java que simula el sistema de inventario de una ferretería. Permite agregar productos, gestionar stock, aplicar descuentos o garantías, y generar alertas cuando el inventario es bajo. El sistema fue diseñado aplicando 4 patrones de diseño GoF de forma coherente y funcional.
