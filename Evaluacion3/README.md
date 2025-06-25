@@ -34,7 +34,17 @@ Evaluacion3/
 └── README.md
 
 ````
+---
 
+## 🔧 Funcionalidades Interactivas
+Desde el menú de consola se pueden realizar las siguientes acciones:
+
+- Agregar productos (Herramientas o Pernos)
+- Visualizar inventario
+- Reducir o aumentar stock
+- Cambiar precios
+- Aplicar o quitar decoradores (garantía, descuento)
+- Recibir alertas si el stock es menor a 5
 ---
 
 ## 🧩 Patrones de Diseño Aplicados
@@ -63,7 +73,7 @@ Producto decorado = new ConGarantia(productoOriginal);
 ### 3. 🔁 Observer (Comportamiento)
 
 **Clases:** `Producto` (sujeto), `AlertaStock` (observador)
-Cuando el stock de un producto baja a menos de 5 unidades, el producto notifica automáticamente a los observadores registrados (como el administrador o sistema de alertas).
+El observador AlertaStock se registra manualmente en tiempo de ejecución antes de reducir el stock. Se recomienda agregarlo justo antes de llamar a reducirStock() para que el producto pueda notificar si entra en estado crítico.
 
 ```java
 producto.agregarObservador(new AlertaStock());
